@@ -7,7 +7,7 @@ close all
 addpath 'C:\Users\user_domain\datafolder';                                 %specify data folder path
 
 %% open 560 trace
-filename = '041523_G7F2_03_410';                                           %use sample data provided or replace with data in the same format
+filename = '041523_G7F2_pup_410';                                           %use sample data provided or replace with data in the same format
 delimiter = ' ';
 formatSpec = '%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -17,7 +17,7 @@ fclose(fileID);
 clearvars filename delimiter formatSpec fileID dataArray ans;
 
 %% open 470 trace
-filename = '041523_G7F2_03_470';                                           %use sample data provided or replace with data in the same format
+filename = '041523_G7F2_pup_470';                                           %use sample data provided or replace with data in the same format
 delimiter = ' ';
 formatSpec = '%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -31,7 +31,7 @@ data470_cut = data470(1:recording_duration_s*20);                          %crop
 
 %% open behavior analysis file and specify parameters
 
-behav_scoring = load('G7F2_PUP4_last.txt');
+behav_scoring = load('G7F2_PUP_behavior_scores.txt');
 frame_rate=30;                                                             %specify framerate for behavior video, if different than photometry sampling rate
 video_duration_s = floor(length(behav_scoring)/frame_rate);
 data_offset = video_duration_s - recording_duration_s;                     %in case the video is longer than the recording, crop the eccess

@@ -10,8 +10,7 @@ current_name = strcat(mouse_trial_ID,'_results_',behavior_name);           %comb
 C=cell(1,5);                                                               %create a cell array to hold final results
 
 %specify folder to save data
-%data_path = 'C:\Users\user_domain\datafolder';                             %specify data path
-data_path = 'C:\Users\ilabo\Documents\MATLAB\Ila_GalCreGCamp';
+data_path = 'C:\Users\user_domain\datafolder';                             %specify data path
 savdir = data_path; 
 
 figure
